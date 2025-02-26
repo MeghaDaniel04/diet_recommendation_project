@@ -28,13 +28,13 @@ mongo = PyMongo(app)
 from app.routes.submit_data import submit_data_blueprint
 from app.routes.food_routes import food_routes
 from app.routes.auth_routes import auth_routes
-# from app.routes.food_logs import food_logs_blueprint
+from app.routes.exercise_routes import exercise_data
 
 
 app.register_blueprint(auth_routes)
-# app.register_blueprint(food_logs_blueprint)
-app.register_blueprint(food_routes)  # Register the food_routes blueprint
-app.register_blueprint(submit_data_blueprint)  # Register the submit_data blueprint
+app.register_blueprint(food_routes) 
+app.register_blueprint(submit_data_blueprint)  
+app.register_blueprint(exercise_data)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ import Signup from "./Components/SignUp";
 import Login from "./Components/Login";
 import ProtectedRoute from "./routes/ProtectedRoutes";
 import LandingPage from "./Pages/LandingPage";
+import ExerciseTracker from "./Pages/ExerciseTracker";
 
 import { Navigate } from "react-router-dom";
 
@@ -35,13 +36,14 @@ const MainLayout = () => {
   return (
     <div>
       {!hideNavbar && <Navbar />} 
-      
+
       <Routes>
         <Route path="/landing" element={<LandingPage />} />
         
         <Route element={<ProtectedRoute />}>
           <Route path="/submit-data" element={<ProfilePage />} />
           <Route path="/food-intake" element={<FoodIntakePage />} />
+          <Route path="/exercise-tracker" element={<ExerciseTracker />}/>
         </Route>
 
         <Route path="*" element={<LandingPage />} /> {/* Redirect unknown routes */}

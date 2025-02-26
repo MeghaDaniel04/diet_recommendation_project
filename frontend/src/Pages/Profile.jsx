@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Profile.css"
 
 const healthConditionsList = ["None", "Sugar", "Cholesterol", "BP", "Hair Loss"];
 const weightGoals = ["Select", "Gain Weight", "Lose Weight","Maintain Weight"];
